@@ -230,6 +230,7 @@ strong {
 /* SKILLS */
 
 .skills {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     margin-bottom: -50px;
@@ -243,9 +244,9 @@ strong {
 }
 
 .skill div {
-    text-align: center;
     width: 80px;
-    margin-right: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .skill div>i {
@@ -253,42 +254,36 @@ strong {
     color: #e0a80d;
 }
 
-.redux {
+.redux, .graphql, .firebase, .typescript, .webpack {
     background-color: #e0a80d;
     width: 50px;
-    height: 50px;
+    height: 45px;
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 2px;
+}
+
+.redux {
     -webkit-mask: url('assets/redux.svg') no-repeat center;
     mask: url('assets/redux.svg') no-repeat center;
 }
 
 .graphql {
-    background-color: #e0a80d;
-    width: 50px;
-    height: 50px;
     -webkit-mask: url('assets/graphql.svg') no-repeat center;
     mask: url('assets/graphql.svg') no-repeat center;
 }
 
 .firebase {
-    background-color: #e0a80d;
-    width: 50px;
-    height: 70px;
     -webkit-mask: url('assets/firebase.svg') no-repeat center;
     mask: url('assets/firebase.svg') no-repeat center;
 }
 
 .typescript {
-    background-color: #e0a80d;
-    width: 50px;
-    height: 48px;
     -webkit-mask: url('assets/typescript.svg') no-repeat center;
     mask: url('assets/typescript.svg') no-repeat center;
 }
 
 .webpack {
-    background-color: #e0a80d;
-    width: 50px;
-    height: 50px;
     -webkit-mask: url('assets/webpack.svg') no-repeat center;
     mask: url('assets/webpack.svg') no-repeat center;
 }
@@ -384,6 +379,7 @@ strong {
     right: 0;
 }
 
+
 @media only screen and (max-width: 1500px) {
     .screen_1, .screen_2, .screen_3 {
         width: 180px;
@@ -419,6 +415,10 @@ strong {
     h1 {
         font-size: 50px;
         margin: 0 0 15px 0;
+    }
+
+    .leftContent h3 {
+        margin-bottom: 5px;
     }
 
     p {
@@ -550,7 +550,7 @@ strong {
 
     .rightPart {
         text-align: center;
-        padding: 10px 10px 20px 10px;
+        padding: 10px;
         background: #2b2c2c;
         flex-direction: column;
     }
@@ -567,27 +567,29 @@ strong {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin-bottom: 0;
+        margin-bottom: -20px;
     }
 
     .skill {
         display: flex;
         align-items: center;
-        flex: .5;
-        flex-basis: 150px;
+        flex-direction: column;
+        flex-basis: 100px;
         margin-bottom: 20px;
     }
 
-    .skill div {
+    .skill>div {
         text-align: center;
         width: 60px;
-        margin-right: 10px;
+        margin-right: 0;
+        margin-top: 3px;
+        margin-bottom: 5px;
     }
 
     .education {
         display: flex;
         flex-direction: column;
-        margin-bottom: 0;
+        margin-bottom: -10px;
     }
 
     .icon {
@@ -669,6 +671,16 @@ strong {
         left: 0;
         right: 0;
         bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .header {
+        height: 100vh;
+    }
+
+    .title {
+        justify-content: space-between;
     }
 }
 

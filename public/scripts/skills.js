@@ -37,7 +37,8 @@ skills.innerHTML = `
     </div>
     <div class="rightPart">
         <div class="rightContent hiddenRight">
-            ${skillsList}
+            <div class="skills">
+                ${skillsList}
             </div>
         </div>
     </div>
